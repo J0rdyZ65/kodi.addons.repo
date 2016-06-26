@@ -19,5 +19,11 @@ The author does not host or distribute any of the content displayed by this addo
 		<website>https://github.com/J0rdyZ65/plugin.video.g2/</website>
 		<platform>all</platform>
 	</extension>
+    <extension point="xbmc.addon.repository" name="J.repo">
+        <info compressed="false">https://raw.githubusercontent.com/J0rdyZ65/kodi.addons.repo/master/addons.xml</info>
+        <checksum>https://raw.githubusercontent.com/J0rdyZ65/kodi.addons.repo/master/addons.xml.md5</checksum>
+        <datadir zip="true">https://raw.githubusercontent.com/J0rdyZ65/kodi.addons.repo/master</datadir>
+        <hashes>false</hashes>
+    </extension>
 </addon>
 </addons>
