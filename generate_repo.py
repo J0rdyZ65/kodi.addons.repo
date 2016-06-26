@@ -1,3 +1,5 @@
+#!  /usr/bin/python
+
 """ repository files and addons.xml generator """
 
 """ Modified by Rodrigo@XMBCHUB to zip plugins/repositories to a "zip" folder """
