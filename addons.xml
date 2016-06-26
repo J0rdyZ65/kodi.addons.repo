@@ -8,7 +8,6 @@
 	<extension point="xbmc.python.pluginsource" library="plugin.py">
 		<provides>video</provides>
 	</extension>
-	<extension point="xbmc.service" library="service.py" start="startup" />
 	<extension point="xbmc.addon.metadata">
 		<summary lang="en">G2 is the Gio's own version of the famous G... addon.</summary>
 		<description lang="en">G2 addon</description>
@@ -20,10 +19,5 @@ The author does not host or distribute any of the content displayed by this addo
 		<website>https://github.com/J0rdyZ65/plugin.video.g2/</website>
 		<platform>all</platform>
 	</extension>
-    <extension point="xbmc.addon.repository" name="J.repo">
-        <info compressed="false">https://raw.githubusercontent.com/J0rdyZ65/kodi.addons.repo/master/addons.xml</info>
-        <checksum>https://raw.githubusercontent.com/J0rdyZ65/kodi.addons.repo/master/addons.xml.md5</checksum>
-        <datadir zip="true">https://raw.githubusercontent.com/J0rdyZ65/kodi.addons.repo/master</datadir>
-    </extension>
 </addon>
 </addons>
