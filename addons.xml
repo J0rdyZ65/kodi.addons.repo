@@ -23,8 +23,7 @@ The author does not host or distribute any of the content displayed by this addo
     <extension point="xbmc.addon.repository" name="J.repo">
         <info compressed="false">https://raw.githubusercontent.com/J0rdyZ65/kodi.addons.repo/master/addons.xml</info>
         <checksum>https://raw.githubusercontent.com/J0rdyZ65/kodi.addons.repo/master/addons.xml.md5</checksum>
-        <datadir zip="true">https://raw.githubusercontent.com/J0rdyZ65/kodi.addons.repo/master/</datadir>
-        <hashes>false</hashes>
+        <datadir zip="true">https://raw.githubusercontent.com/J0rdyZ65/kodi.addons.repo/master</datadir>
     </extension>
 </addon>
 </addons>
