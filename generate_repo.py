@@ -132,12 +132,16 @@ def generate_zip_file(output_path, addon_dir, addonxml_path, force=False):
     if not addon_version or not addon_id:
         raise Exception('Malformed %s/addon.xml, missing id and/or version attributes'%addon_dir)
 
+    if addon_version == '0.0.0':
+        raise Exception('KODI does not like version 0.0.0!')
+
     zip_filename = '%s-%s.zip'%(addon_id, addon_version)
     archive_dir = os.path.join(output_path, addon_id)
     zip_path = os.path.join(archive_dir, zip_filename)
 
     if os.path.isfile(zip_path) and not force:
-        raise Exception('ZIP file for addon %s v%s already exists; please use the --force flag to override'%(addon_id, addon_version))
+        raise Exception('ZIP file for addon %s v%s already exists; please use the --force flag to override'%
+                        (addon_id, addon_version))
 
     sys.stderr.write('Generating ZIP file %s...'%zip_filename)
     sys.stderr.flush()
