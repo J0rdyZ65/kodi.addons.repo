@@ -23,6 +23,7 @@ import os
 import md5
 import sys
 import errno
+import getopt
 import shutil
 import zipfile
 import tempfile
@@ -34,6 +35,17 @@ KODI_REPOSITORY = 'repository.j0rdyz65'
 
 
 def main():
+    try:
+        opts, dummy_args = getopt.getopt(sys.argv[1:], 'f', ['force'])
+    except getopt.GetoptError as ex:
+        print >> sys.stderr, ex
+        return 1
+
+    opt_force = False
+    for opt, arg in opts:
+        if opt in ('-f', '--force'):
+            opt_force = True
+
     tools_path = os.path.abspath(os.path.join(os.path.dirname(os.path.realpath(__file__))))
     output_path = tools_path
 
@@ -79,7 +91,7 @@ def main():
             fil.close()
             print >> sys.stderr, 'Updated %s/addons.xml with repository info'%addon_dir
 
-        version = generate_zip_file(output_path, addon_dir, addonxml_path)
+        version = generate_zip_file(output_path, addon_dir, addonxml_path, force=opt_force)
 
         if fil:
             os.remove(addonxml_path)
@@ -109,7 +121,7 @@ def main():
     return 0
 
 
-def generate_zip_file(output_path, addon_dir, addonxml_path):
+def generate_zip_file(output_path, addon_dir, addonxml_path, force=False):
     addon_id = None
     addon_version = None
     document = minidom.parse(addonxml_path)
@@ -121,10 +133,15 @@ def generate_zip_file(output_path, addon_dir, addonxml_path):
         raise Exception('Malformed %s/addon.xml, missing id and/or version attributes'%addon_dir)
 
     zip_filename = '%s-%s.zip'%(addon_id, addon_version)
+    archive_dir = os.path.join(output_path, addon_id)
+    zip_path = os.path.join(archive_dir, zip_filename)
+
+    if os.path.isfile(zip_path) and not force:
+        raise Exception('ZIP file for addon %s v%s already exists; please use the --force flag to override'%(addon_id, addon_version))
+
     sys.stderr.write('Generating ZIP file %s...'%zip_filename)
     sys.stderr.flush()
 
-    archive_dir = os.path.join(output_path, addon_id)
     try:
         os.mkdir(archive_dir)
     except OSError as ex:
@@ -133,7 +150,6 @@ def generate_zip_file(output_path, addon_dir, addonxml_path):
         else:
             raise
 
-    zip_path = os.path.join(archive_dir, zip_filename)
     zip_file = zipfile.ZipFile(zip_path, 'w')
 
     for root, dummy_dirs, files in os.walk(addon_dir):
@@ -152,4 +168,8 @@ def generate_zip_file(output_path, addon_dir, addonxml_path):
 
 
 if  __name__ == "__main__":
-    sys.exit(main())
+    try:
+        sys.exit(main())
+    except Exception as ex:
+        print >> sys.stderr, '%s: %s'%(sys.argv[0], ex)
+        sys.exit(1)

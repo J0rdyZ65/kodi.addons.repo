@@ -1,7 +1,0 @@
-----------------------
-G2 v0.0.1 (27-June-16)
-----------------------
-
-- [COLOR orange]NOTE: G2 is the Gio's own version of the famous G... addon.[/COLOR]
-- [COLOR orange]NOTE: For more information on the original addon and its derivates, please visit www.tvaddons.ag.[/COLOR]
-- [COLOR orange]NOTE: For now there is no support for G2![/COLOR]
