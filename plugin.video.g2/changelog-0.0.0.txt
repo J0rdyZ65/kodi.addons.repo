@@ -1,5 +1,5 @@
 ----------------------
-G2 v0.0.0 (26-June-16)
+G2 v0.0.0 (27-June-16)
 ----------------------
 
 - [COLOR orange]NOTE: G2 is the Gio's own version of the famous G... addon.[/COLOR]
