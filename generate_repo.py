@@ -69,6 +69,7 @@ def main():
             if line and line.find('<?xml') < 0:
                 addonsxml_source += unicode(line+'\n', 'utf-8')
 
+        fil = None
         if repositoryxml_source and '{xbmc_addon_repository_xml}' in addonsxml_source:
             addonrepoxml_source = addonxml_source.format(
                 xbmc_addon_repository_xml=repositoryxml_source,
@@ -79,6 +80,9 @@ def main():
             print >> sys.stderr, 'Updated %s/addons.xml with repository info'%addon_dir
 
         version = generate_zip_file(output_path, addon_dir, addonxml_path)
+
+        if fil:
+            os.remove(addonxml_path)
 
         for filename in ['changelog.txt', 'icon.png', 'fanart.jpg']:
             filepath = os.path.join(addon_dir, filename)
@@ -116,7 +120,6 @@ def generate_zip_file(output_path, addon_dir, addonxml_path):
     if not addon_version or not addon_id:
         raise Exception('Malformed %s/addon.xml, missing id and/or version attributes'%addon_dir)
 
-
     zip_filename = '%s-%s.zip'%(addon_id, addon_version)
     sys.stderr.write('Generating ZIP file %s...'%zip_filename)
     sys.stderr.flush()
@@ -137,7 +140,7 @@ def generate_zip_file(output_path, addon_dir, addonxml_path):
         for filename in files:
             if '/.git' not in root:
                 if filename == 'addon.xml':
-                    zip_file.write(addonxml_path, filename)
+                    zip_file.write(addonxml_path, os.path.join(root, filename))
                 else:
                     zip_file.write(os.path.join(root, filename))
                     
