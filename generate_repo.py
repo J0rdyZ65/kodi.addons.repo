@@ -143,8 +143,12 @@ def generate_zip_file(output_path, addon_dir, addonxml_path, force=False):
         raise Exception('ZIP file for addon %s v%s already exists; please use the --force flag to override'%
                         (addon_id, addon_version))
 
-    sys.stderr.write('Generating ZIP file %s...'%zip_filename)
-    sys.stderr.flush()
+    with open(os.path.join(addon_dir, '.buildexclude')) as fil:
+        exclude_prefixes = fil.readlines()
+    exclude_prefixes = [p.strip() for p in exclude_prefixes]
+    # print >> sys.stderr, exclude_prefixes
+
+    print >> sys.stderr, 'Generating ZIP file %s...'%zip_filename
 
     try:
         os.mkdir(archive_dir)
@@ -158,11 +162,17 @@ def generate_zip_file(output_path, addon_dir, addonxml_path, force=False):
 
     for root, dummy_dirs, files in os.walk(addon_dir):
         for filename in files:
-            if '/.git' not in root:
-                if filename == 'addon.xml':
-                    zip_file.write(addonxml_path, os.path.join(root, filename))
-                else:
-                    zip_file.write(os.path.join(root, filename))
+            if '/.git' in root:
+                continue
+            # print >> sys.stderr, root, filename
+            filepath = os.path.join(root, filename)
+            if any(filepath.startswith(os.path.join(addon_dir, p)) for p in exclude_prefixes):
+                print >> sys.stderr, '%s: %s: excluded by .buildexclude'%(sys.argv[0], filepath)
+                continue
+            if filename == 'addon.xml':
+                zip_file.write(addonxml_path, filepath)
+            else:
+                zip_file.write(filepath)
                     
     zip_file.close()
 
