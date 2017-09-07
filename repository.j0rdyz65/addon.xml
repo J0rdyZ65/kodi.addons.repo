@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="repository.j0rdyz65" name="J0rdyZ65@GitHub Repository" version="0.0.1" provider-name="J0rdyZ65@GitHub">
+	<requires>
+		<import addon="xbmc.addon" version="12.0.0"/>
+	</requires>
+	<extension point="xbmc.addon.repository" name="J0rdyZ65@GitHub Repository">
+		<dir minversion="15.0.0">
+	        <info compressed="false">/home/giordano/Kodi/kodi.addons.repo/addons.xml</info>
+	        <checksum>/home/giordano/Kodi/kodi.addons.repo/addons.xml.md5</checksum>
+	        <datadir zip="true">/home/giordano/Kodi/kodi.addons.repo</datadir>
+	        <hashes>true</hashes>
+	    </dir>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary>J0rdyZ65@GitHub Repository</summary>
+		<description>J0rdyZ65@GitHub Repository</description>
+		<platform>all</platform>
+	</extension>
+</addon>
