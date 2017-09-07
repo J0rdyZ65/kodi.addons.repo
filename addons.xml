@@ -1,5 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addons>
+<addon id="repository.j0rdyz65" name="J0rdyZ65@GitHub Repository" version="0.0.1" provider-name="J0rdyZ65@GitHub">
+    <extension point="xbmc.addon.repository" name="J0rdyZ65@GitHub Repository">
+        <dir>
+            <info compressed="false">https://raw.githubusercontent.com/J0rdyZ65/repository.j0rdyz65/master/addons.xml</info>
+            <checksum>https://raw.githubusercontent.com/J0rdyZ65/repository.j0rdyz65/master/addons.xml.md5</checksum>
+            <datadir zip="true">https://raw.githubusercontent.com/J0rdyZ65/repository.j0rdyz65/master/</datadir>
+        </dir>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <summary>J0rdyZ65@GitHub Repository</summary>
+        <description>J0rdyZ65@GitHub Repository</description>
+        <platform>all</platform>
+    </extension>
+</addon>
 <addon id="plugin.video.g2" name="G2" version="0.0.2" provider-name="J0rdyZ65">
 	<requires>
 		<import addon="xbmc.python" version="2.20.0" />
