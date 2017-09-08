@@ -14,7 +14,7 @@
         <platform>all</platform>
     </extension>
 </addon>
-<addon id="plugin.video.g2" name="G2" version="0.0.2" provider-name="J0rdyZ65">
+<addon id="plugin.video.g2" name="G2" version="0.0.3" provider-name="J0rdyZ65">
 	<requires>
 		<import addon="xbmc.python" version="2.20.0" />
 		<import addon="script.module.requests" version="2.9.1" />

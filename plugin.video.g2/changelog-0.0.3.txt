@@ -1,0 +1,62 @@
+==========================
+G2 v0.0.3 (8-September-17)
+==========================
+
+- [COLOR orange]NOTE: G2 is the Gio's own version of the famous G... addon.[/COLOR]
+- [COLOR orange]NOTE: For more information on the original addon and its derivates, please visit www.tvaddons.ag.[/COLOR]
+- [COLOR orange]NOTE: For support open an issue on Github[/COLOR]
+
+New features
+------------
+- Ability to use the Covenant themes installed with the script.covenant.artwok
+- Added limited support for TV shows
+  - Search by title
+  - List popular shows
+  - Push episode via thetvdb.com
+  - Episode bookmarking / trakt status
+- Auto-update via repository addon
+- Improved compatibility with ISOD channels and servers
+
+Please note that the sample packages have been removed.
+
+=====================
+G2 v0.0.2 (4-July-16)
+=====================
+
+- [COLOR orange]NOTE: G2 is the Gio's own version of the famous G... addon.[/COLOR]
+- [COLOR orange]NOTE: For more information on the original addon and its derivates, please visit www.tvaddons.ag.[/COLOR]
+- [COLOR orange]NOTE: For support open an issue on Github[/COLOR]
+
+New features
+------------
+- Ability to use the Exodus themes installed with the script.exodus.artwok
+- Setting the info language to AUTO would retrieve video metadata using the Kodi language
+- Setting the auto play (or lazy mode) would play the video as soon as a valid source is found
+- Ability to disable the pushbullet player notification (push to kodi are still processed)
+- Added title, year and rating sorting methods for non paged movie directories (e.g. oscars, trakt recommendations)
+- Improved compatibility with ISOD channels and servers
+- Italian translation
+- Speedups and fixes
+
+Please note that TV shows support is still missing.
+
+======================
+G2 v0.0.1 (27-June-16)
+======================
+
+New features (compared to the original genesis)
+-----------------------------------------------
+- Pushbullet integration
+  - current playing title notification (it works also when the playing is started by other plugins or kodi itself)
+  - ability to stop the playing title by a connected device
+  - push video urls or TMDB/IMDB urls
+    - any urls that can be resolved in a valid stream by the available resolvers is immediately played
+    - TMDB/IMDB urls containing the respective DB id trigger the opening of the source dialog for the given title
+- Extensible via package addons dynamically downloaded; available packages are:
+  - plugin.video.streamondemand adapter for channels search (ISOD providers package)
+  - plugin.video.streamondemand adapter for host/servers URI resolution (ISOD resolvers package)
+  - script.module.urlresolver adapter for host/servers URI resolution (SMU resolvers package)
+  - PreDB dbs package for listing the latest additions (PreDB dbs package)
+- Dynamic source dialog with stream validation and inspection (format and resolution)
+
+Please note that TV shows support is still missing.
