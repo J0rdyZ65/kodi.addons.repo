@@ -17,7 +17,10 @@ New features
 - Auto-update via repository addon
 - Improved compatibility with ISOD channels and servers
 
-Please note that the sample packages have been removed.
+Known issues
+------------
+- The sample packages doesn't work, use the ISOD providers/resolvers
+- The IMDB lists doesn't work
 
 =====================
 G2 v0.0.2 (4-July-16)
