@@ -1,6 +1,6 @@
-==========================
-G2 v0.0.3 (8-September-17)
-==========================
+===========================
+G2 v0.0.3 (11-September-17)
+===========================
 
 - [COLOR orange]NOTE: G2 is the Gio's own version of the famous G... addon.[/COLOR]
 - [COLOR orange]NOTE: For more information on the original addon and its derivates, please visit www.tvaddons.ag.[/COLOR]
@@ -11,16 +11,14 @@ New features
 - Ability to use the Covenant themes installed with the script.covenant.artwok
 - Added limited support for TV shows
   - Search by title
-  - List popular shows
+  - List popular / peoples watching shows
   - Push episode via thetvdb.com
   - Episode bookmarking / trakt status
 - Auto-update via repository addon
-- Improved compatibility with ISOD channels and servers
 
 Known issues
 ------------
-- The sample packages doesn't work, use the ISOD providers/resolvers
-- The IMDB lists doesn't work
+- The IMDB personal lists doesn't work
 
 =====================
 G2 v0.0.2 (4-July-16)
