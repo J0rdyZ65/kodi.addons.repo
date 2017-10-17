@@ -14,6 +14,20 @@
         <platform>all</platform>
     </extension>
 </addon>
+<addon id="script.module.rpyc" name="RPyC" version="3.4.4" provider-name="J0rdyZ65">
+	<requires>
+		<import addon="xbmc.python" version="2.1.0" />
+	</requires>
+	<extension point="xbmc.python.module" library="lib" />
+	<extension point="xbmc.addon.metadata">
+		<platform>all</platform>
+		<summary lang="en">Remote Python Call (RPyC), a transparent and symmetric RPC library.</summary>
+		<description lang="en">
+RPyC (pronounced like are-pie-see), or Remote Python Call, is a transparent library for symmetrical remote procedure calls, clustering, and distributed-computing.
+RPyC makes use of object-proxying, a technique that employs python.s dynamic nature, to overcome the physical boundaries between processes and computers, so that remote objects can be manipulated as if they were local.
+		</description>
+	</extension>
+</addon>
 <addon id="plugin.video.g2" name="G2" version="0.0.3" provider-name="J0rdyZ65">
 	<requires>
 		<import addon="xbmc.python" version="2.20.0" />
@@ -24,7 +38,7 @@
 	</extension>
 	<extension point="xbmc.service" library="service.py" start="startup" />
 	<extension point="xbmc.addon.metadata">
-		<summary lang="en">G2 is the Gio's own version of the famous G... addon.</summary>
+		<summary lang="en">G2 is the Gio's own version of the once famous Genesys addon.</summary>
 		<description lang="en">G2 addon</description>
 		<disclaimer lang="en">The author does not host or distribute any of the content displayed by this addon. The author does not have any affiliation with the content provider.</disclaimer>
 		<forum>None yet</forum>
