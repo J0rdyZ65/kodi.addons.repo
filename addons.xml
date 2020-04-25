@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addons>
-<addon id="plugin.video.g2" name="G2" provider-name="J0rdyZ65" version="0.0.4">
+<addon id="plugin.video.g2" name="G2" provider-name="J0rdyZ65" version="0.0.5">
 	<requires>
-		<import addon="xbmc.python" version="2.20.0"/>
+		<import addon="xbmc.python" version="2.24.0"/>
 		<import addon="script.module.requests" version="2.9.1"/>
+		<import addon="script.module.six"/>
 		<import addon="script.module.rpyc" optional="true" version="3.4.4"/>
-		<import addon="script.module.unidecode" optional="true"/>
 	</requires>
 	<extension library="plugin.py" point="xbmc.python.pluginsource">
 		<provides>video</provides>
@@ -13,33 +13,49 @@
 	<extension library="service.py" point="xbmc.service" start="startup"/>
 	<extension point="xbmc.addon.metadata">
 		<summary lang="en">G2 is the Gio's own version of an once famous addon</summary>
-		<description lang="en">G2 addon</description>
-		<disclaimer lang="en">The author does not host or distribute any of the content displayed by this addon. The author does not have any affiliation with the content provider.</disclaimer>
+		<description lang="en">G2 is the easiest way to access the video content out there.
+The author does not host nor distribute any of the content displayed by this addon. The author does not have any affiliation with the content provider.</description>
+		<description lang="it">G2 è il modo più semplice per accedere ai contenuti video presenti là fuori.
+L'autore non ospita nè distribuisce alcuno dei contenuti mostrati da questo addon. L'autore non ha nessuna affiliazione con il fornitore dei contenuti.</description>
+		<disclaimer lang="en">The author does not host nor distribute any of the content displayed by this addon. The author does not have any affiliation with the content provider.</disclaimer>
+		<disclaimer lang="it">L'autore non ospita nè distribuisce alcuno dei contenuti mostrati da questo addon. L'autore non ha nessuna affiliazione con il fornitore dei contenuti.</disclaimer>
 		<platform>all</platform>
 	</extension>
-	<news>v0.0.4 (2017-12-22)
-
+	<news>v0.0.5 (2020-04-24)
 New features
 ------------
-- Keyboard input history
-- Keep Watching sections for movies and episodes
-- Play local Kodi content if available
-- Support for Kodi bookmarks
-- Italian Streamers package
-  - Rai**ay catalog search and app/browser launch
-  - Net**ix catalog search and app/browser launch
+- Improved support for touch devices and non Aen-Nox skins
+- Kodi videlibrary watched status update
+- Set/reset watched status for entire tvshows and seasons
+- Added italian streamers sources providers:
+  - net**ixlovers (replaces allflicks which has been discontinued)[*]
+  - rai**ay (added direct link resolution for tvshow episodes)
 
-Known issues
+[*] sources are played using the specific application or site
+
+Removed features
+----------------
+- Support for python2.6 based Kodi installations
+- Imdb users lists
+
+Fixed issues
 ------------
-- Sometime the view mode during directory pagination is not kept
-- Movie search by year doesn't yield the expected result</news>
+- Movie search by year now properly return the movies released in the specified year
+
+Known issues and limitations
+----------------------------
+- The watched status Kodi library sync for entire tvshows/seasons is disabled
+	</news>
+	<extension point="xbmc.addon.metadata">
+		<reuselanguageinvoker>false</reuselanguageinvoker>
+	</extension>
 </addon>
-<addon id="repository.j0rdyz65" name="J0rdyZ65@GitHub Repository" version="0.0.1" provider-name="J0rdyZ65@GitHub">
+<addon id="repository.j0rdyz65" name="J0rdyZ65@GitHub Repository" version="0.0.2" provider-name="J0rdyZ65@GitHub">
     <extension point="xbmc.addon.repository" name="J0rdyZ65@GitHub Repository">
         <dir>
-            <info compressed="false">https://raw.githubusercontent.com/J0rdyZ65/repository.j0rdyz65/master/addons.xml</info>
-            <checksum>https://raw.githubusercontent.com/J0rdyZ65/repository.j0rdyz65/master/addons.xml.md5</checksum>
-            <datadir zip="true">https://raw.githubusercontent.com/J0rdyZ65/repository.j0rdyz65/master/</datadir>
+            <info compressed="false">https://raw.githubusercontent.com/J0rdyZ65/kodirepo/master/addons.xml</info>
+            <checksum>https://raw.githubusercontent.com/J0rdyZ65/kodirepo/master/addons.xml.md5</checksum>
+            <datadir zip="true">https://raw.githubusercontent.com/J0rdyZ65/kodirepo/master/</datadir>
         </dir>
     </extension>
     <extension point="xbmc.addon.metadata">

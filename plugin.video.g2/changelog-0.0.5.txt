@@ -1,6 +1,38 @@
-==========================
-G2 v0.0.4 (22-December-17)
-==========================
+=========================
+G2 v0.0.5 (24-April-2020)
+=========================
+
+- [COLOR orange]NOTE: G2 is the Gio's own version of an once famous addon.[/COLOR]
+
+New features
+------------
+- Improved support for touch devices and non Aen-Nox skins
+- Kodi videlibrary watched status update
+- Set/reset watched status for entire tvshows and seasons
+- Added italian streamers sources providers:
+  - net**ixlovers (replaces allflicks which has been discontinued)[*]
+  - rai**ay (added direct link resolution for tvshow episodes)
+
+[*] sources are played using the specific application or site
+
+Removed features
+----------------
+- Support for python2.6 based Kodi installations
+- Imdb users lists
+
+Fixed issues
+------------
+- Movie search by year now properly return the movies released in the specified year
+
+Known issues and limitations
+----------------------------
+- The watched status Kodi library sync for entire tvshows/seasons is disabled
+
+============================
+G2 v0.0.4 (22-December-2017)
+============================
+
+- [COLOR orange]NOTE: G2 is the Gio's own version of an once famous addon.[/COLOR]
 
 New features
 ------------
@@ -17,15 +49,15 @@ Known issues
 - Sometime the view mode during directory pagination is not kept
 - Movie search by year doesn't yield the expected result
 
-===========================
-G2 v0.0.3 (12-September-17)
-===========================
+=============================
+G2 v0.0.3 (12-September-2017)
+=============================
 
 - [COLOR orange]NOTE: G2 is the Gio's own version of an once famous addon.[/COLOR]
 
 New features
 ------------
-- Ability to use the Covenant themes installed with the script.covenant.artwok
+- Ability to use script.covenant.artwok themes
 - Added limited support for TV shows
   - Search by title
   - List popular / peoples watching shows
@@ -37,15 +69,15 @@ Known issues
 ------------
 - The IMDB personal lists doesn't work
 
-=====================
-G2 v0.0.2 (4-July-16)
-=====================
+=======================
+G2 v0.0.2 (4-July-2016)
+=======================
 
 - [COLOR orange]NOTE: G2 is the Gio's own version of an once famous addon.[/COLOR]
 
 New features
 ------------
-- Ability to use the Exodus themes installed with the script.exodus.artwok
+- Ability to use script.exodus.artwok themes
 - Setting the info language to AUTO would retrieve video metadata using the Kodi language
 - Setting the auto play (or lazy mode) would play the video as soon as a valid source is found
 - Ability to disable the pushbullet player notification (push to kodi are still processed)
@@ -56,9 +88,9 @@ New features
 
 Please note that TV shows support is still missing.
 
-======================
-G2 v0.0.1 (27-June-16)
-======================
+========================
+G2 v0.0.1 (27-June-2016)
+========================
 
 New features (compared to the original)
 ---------------------------------------
@@ -68,11 +100,7 @@ New features (compared to the original)
   - push video urls or TMDB/IMDB urls
     - any urls that can be resolved in a valid stream by the available resolvers is immediately played
     - TMDB/IMDB urls containing the respective DB id trigger the opening of the source dialog for the given title
-- Extensible via package addons dynamically downloaded; available packages are:
-  - plugin.video.streamondemand adapter for channels search (ISOD providers package)
-  - plugin.video.streamondemand adapter for host/servers URI resolution (ISOD resolvers package)
-  - script.module.urlresolver adapter for host/servers URI resolution (SMU resolvers package)
-  - PreDB dbs package for listing the latest additions (PreDB dbs package)
+- Extensible via package addons dynamically downloaded
 - Dynamic source dialog with stream validation and inspection (format and resolution)
 
 Please note that TV shows support is still missing.
