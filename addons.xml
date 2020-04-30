@@ -47,7 +47,7 @@ Known issues and limitations
 - The watched status Kodi library sync for entire tvshows/seasons is disabled
 	</news>
 	<extension point="xbmc.addon.metadata">
-		<reuselanguageinvoker>false</reuselanguageinvoker>
+		<reuselanguageinvoker>true</reuselanguageinvoker>
 	</extension>
 </addon>
 <addon id="repository.j0rdyz65" name="J0rdyZ65@GitHub Repository" version="0.0.2" provider-name="J0rdyZ65@GitHub">
