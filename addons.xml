@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addons>
-<addon id="plugin.video.g2" name="G2" provider-name="J0rdyZ65" version="0.0.5">
+<addon id="plugin.video.g2" name="G2" provider-name="J0rdyZ65" version="0.0.6">
 	<requires>
 		<import addon="xbmc.python" version="2.24.0"/>
 		<import addon="script.module.requests" version="2.9.1"/>
@@ -21,30 +21,15 @@ L'autore non ospita nè distribuisce alcuno dei contenuti mostrati da questo add
 		<disclaimer lang="it">L'autore non ospita nè distribuisce alcuno dei contenuti mostrati da questo addon. L'autore non ha nessuna affiliazione con il fornitore dei contenuti.</disclaimer>
 		<platform>all</platform>
 	</extension>
-	<news>v0.0.5 (2020-04-25)
-New features
-------------
-- Improved support for touch devices and non Aen-Nox skins
-- Kodi videlibrary watched status update
-- Set/reset watched status for entire tvshows and seasons
-- Added italian streamers sources providers:
-  - net**ixlovers (replaces allflicks which has been discontinued)[*]
-  - rai**ay (added direct link resolution for tvshow episodes)
-
-[*] sources are played using the specific application or site
-
-Removed features
-----------------
-- Support for python2.6 based Kodi installations
-- Imdb users lists
-
+	<news>v0.0.6 (2020-05-21)
 Fixed issues
 ------------
-- Movie search by year now properly return the movies released in the specified year
+- Removed the need for cloudflare bypass where possible
 
 Known issues and limitations
 ----------------------------
 - The watched status Kodi library sync for entire tvshows/seasons is disabled
+- Cloudflare bypass not working with new IUAM javascript
 	</news>
 	<extension point="xbmc.addon.metadata">
 		<reuselanguageinvoker>true</reuselanguageinvoker>
