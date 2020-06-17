@@ -1,3 +1,39 @@
+=======================
+G2 v0.0.7 (09-Jun-2020)
+=======================
+
+- [COLOR orange]NOTE: G2 is the Gio's own version of an once famous addon.[/COLOR]
+
+New Features
+------------
+- Replaced tvdb with tmdb for tvshow metadata
+- Added context menu command to remove a movie/tvshow from the Kodi video library
+
+Fixed issues
+------------
+- Improved title matching for providers' search results
+- For some tvshow, the seasons and/or episodes order was wrong
+
+Known issues and limitations
+----------------------------
+- The watched status Kodi video library sync for entire tvshows/seasons is disabled
+- Cloudflare bypass doesn't support the new IUAM javascript
+
+=======================
+G2 v0.0.6 (21-May-2020)
+=======================
+
+- [COLOR orange]NOTE: G2 is the Gio's own version of an once famous addon.[/COLOR]
+
+Fixed issues
+------------
+- Removed the need for cloudflare bypass where possible
+
+Known issues and limitations
+----------------------------
+- The watched status Kodi library sync for entire tvshows/seasons is disabled
+- Cloudflare bypass not working with new IUAM javascript
+
 =========================
 G2 v0.0.5 (25-April-2020)
 =========================
